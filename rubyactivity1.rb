@@ -15,4 +15,3 @@ for i in 0..2
     contacts["Avion School"].merge!(hash[i] => contact_data[1][i])
 end
 puts contacts
-
