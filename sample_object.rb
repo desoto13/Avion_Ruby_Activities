@@ -4,10 +4,10 @@ class Car
         @m = m
     end
 
-    def desc
+    def compliment
         puts "Cool #{@c} #{@m}"
     end
 end
 
 newcar = Car.new("red", "Ferrari")
-newcar.desc()
+newcar.compliment
