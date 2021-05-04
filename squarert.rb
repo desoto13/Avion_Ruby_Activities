@@ -7,5 +7,9 @@ def sqrt(n)
     end
     puts false
 end
-sqrt(25)
+sqrt(0)
+sqrt(1)
+sqrt(2)
+sqrt(3)
+sqrt(4)
 
