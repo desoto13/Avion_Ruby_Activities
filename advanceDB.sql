@@ -1,11 +1,7 @@
-CREATE TABLE students (
+CREATE TABLE classrooms (
   id INTEGER,
-  first_name varchar(255),
-  middle_name varchar(255) DEFAULT 'Blank',
-  last_name	varchar(255),
-  age INTEGER,
-  location varchar(255),
-  PRIMARY KEY(ID)
+  student_id INTEGER,
+  section varchar(255)
 )
 
 INSERT INTO classrooms (id, student_id, SECTION)
@@ -21,16 +17,16 @@ VALUES(9, 9, 'B'),
 VALUES(10, 10, 'C');
 
 -- INNER JOIN
-SELECT s.first_name, s.last_name, l.section FROM students s INNER JOIN classrooms l ON s.id = l.id
+SELECT s.first_name, s.last_name, l.section FROM students s INNER JOIN classrooms l ON s.id = l.student_id
 
 -- LEFT JOIN
-SELECT s.first_name, s.middle_name, s.last_name, s.age, s.location, l.section FROM students s LEFT JOIN classrooms l ON s.id = l.id
+SELECT s.first_name, s.middle_name, s.last_name, s.age, s.location, l.section FROM students s LEFT JOIN classrooms l ON s.id = l.student_id
 
 -- RIGHT JOIN
-SELECT s.first_name, s.last_name, l.student_id, l.section FROM students s RIGHT JOIN classrooms l ON s.id = l.id
+SELECT s.first_name, s.last_name, l.student_id, l.section FROM students s RIGHT JOIN classrooms l ON s.id = l.student_id
 
 -- FULL JOIN
-SELECT * FROM students s FULL JOIN classrooms l ON s.id = l.id
+SELECT * FROM students s FULL JOIN classrooms l ON s.id = l.student_id
 
 
 
