@@ -22,35 +22,38 @@
 # end
 
 #New Dependency Principle
-class Broker
-    def initialize(source)
-        #source is some object that can easily be modified
-        @source = source
+#Fixed code of the app
+class Agent
+    def initialize(area, total_price)
+        @area = area
+        @total_price = total_price
     end
 
-    def get_data
-        raise "Error not implemented"
-    end
-end
-
-class Top_Broker < Broker
-    def initialize(clients)
-        #clients is a sample db that can be changed anytime
-        @clients = clients
+    def sell(type)
+        type.sell(@area, price_per_sqm)
     end
 
-    def get_data
-        puts "Used #{@source} for #{@clients}"
+    private
+    def price_per_sqm
+        @total_price.to_f / @area.to_f
     end
 end
 
-class Investor < Broker
-    def initialize(stocks)
-        #stocks is a data source that can also be changed anytime
-        @stocks = stocks
+#Sample Middleman/Processor that can be called without modifying the agent app
+class HouseAgent
+    def sell(area, price_per_sqm)
+        puts "Sold a #{area} sqm house at Php #{price_per_sqm} per sqm"
     end
+end
 
-    def get_data
-        puts "Studied #{@source} for #{@stocks}"
+class LotAgent
+    def sell(area, price_per_sqm)
+        puts "Sold a #{area} sqm lot at Php #{price_per_sqm} per sqm"
+    end
+end
+
+class CondoAgent
+    def sell(area, price_per_sqm)
+        puts "Sold a #{area} sqm condominium at Php #{price_per_sqm} per sqm"
     end
 end
