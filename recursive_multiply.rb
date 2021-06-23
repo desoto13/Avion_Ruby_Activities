@@ -1,4 +1,4 @@
-def rec_mult(a,b)
+def multiply(a,b)
   n=0
   1.upto(b.abs) {|num| n+=a.abs}
   return 0 if a==0 || b==0
