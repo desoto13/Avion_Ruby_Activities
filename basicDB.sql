@@ -8,21 +8,11 @@ CREATE TABLE students (
 )
 
 INSERT INTO students (id, first_name, last_name, age, location)
-VALUES(1, 'Juan', 'Cruz', 18, 'Manila');
-
-INSERT INTO students (id, first_name, last_name, age, location)
-VALUES(2, 'Anne', 'Wall', 20, 'Manila');
-
-INSERT INTO students (id, first_name, last_name, age, location)
-VALUES(3, 'Theresa', 'Joseph', 21, 'Manila');
-
-INSERT INTO students (id, first_name, last_name, age, location)
-VALUES(4, 'Isaac', 'Gray', 19, 'Laguna');
-
-INSERT INTO students (id, first_name, last_name, age, location)
-VALUES(5, 'Zack', 'Matthews', 22, 'Marikina');
-
-INSERT INTO students (id, first_name, last_name, age, location)
+VALUES(1, 'Juan', 'Cruz', 18, 'Manila'),
+VALUES(2, 'Anne', 'Wall', 20, 'Manila'),
+VALUES(3, 'Theresa', 'Joseph', 21, 'Manila'),
+VALUES(4, 'Isaac', 'Gray', 19, 'Laguna'),
+VALUES(5, 'Zack', 'Matthews', 22, 'Marikina'),
 VALUES(6, 'Finn', 'Lam', 25, 'Manila');
 
 UPDATE students
