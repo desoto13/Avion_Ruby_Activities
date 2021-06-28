@@ -9,6 +9,20 @@
 # - method that satisfies the requirements
 # - tests to cover the method, written in RSpec
 
+#For very large numbers
+# def num_to_alpha(num)
+#   alphabet = ('A'..'Z').to_a
+#   letter = ""
+#   quo = num
+#   loop do
+#     ans = (quo-1).divmod(26)
+#     letter.prepend(alphabet[ans[1]])
+#     quo = ans[0]
+#     break if quo == 0
+#   end
+#   puts letter
+# end
+
 def num_to_alpha(num)
   letter = 'A'
   (2..num).each {|n| letter = letter.succ}
@@ -17,7 +31,8 @@ end
 
 num_to_alpha(1)
 num_to_alpha(20)
-num_to_alpha(10000)
+num_to_alpha(1000)
+num_to_alpha(26)
 num_to_alpha(100)
 
 describe("get product") do
