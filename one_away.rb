@@ -4,11 +4,13 @@ def one_away (first,second)
   if a.length > b.length
     (a-b).length == 1
   else
-    (b-a).length == 1 || (b-a).length == 0
+    (b-a).length == 1 || a == b
   end
 end
 
 puts one_away("pale", "ple")
-puts one_away("pales", "pale")
+puts one_away("ple", "pale")
+puts one_away("pale", "pales")
 puts one_away("pale", "bale")
 puts one_away("pale", "bake")
+puts one_away("pale", "epal")
